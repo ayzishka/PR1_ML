@@ -1,0 +1,48 @@
+4610  execve("/usr/bin/cat", ["cat", "data/01.log"], 0xffffd5c9bc60 /* 50 vars */) = 0
+4610  brk(NULL)                         = 0xc813a3f84000
+4610  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xe01df1a5c000
+4610  faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+4610  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+4610  fstat(3, {st_mode=S_IFREG|0644, st_size=64079, ...}) = 0
+4610  mmap(NULL, 64079, PROT_READ, MAP_PRIVATE, 3, 0) = 0xe01df1a16000
+4610  close(3)                          = 0
+4610  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+4610  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+4610  fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+4610  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xe01df1848000
+4610  mmap(0xe01df1850000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xe01df1850000
+4610  munmap(0xe01df1848000, 32768)     = 0
+4610  munmap(0xe01df1a0e000, 32656)     = 0
+4610  mprotect(0xe01df19ea000, 77824, PROT_NONE) = 0
+4610  mmap(0xe01df19fd000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xe01df19fd000
+4610  mmap(0xe01df1a02000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xe01df1a02000
+4610  close(3)                          = 0
+4610  set_tid_address(0xe01df1a5cff0)   = 4610
+4610  set_robust_list(0xe01df1a5d000, 24) = 0
+4610  rseq(0xe01df1a5d640, 0x20, 0, 0xd428bc00) = 0
+4610  mprotect(0xe01df19fd000, 12288, PROT_READ) = 0
+4610  mprotect(0xc813818bf000, 4096, PROT_READ) = 0
+4610  mprotect(0xe01df1a64000, 8192, PROT_READ) = 0
+4610  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+4610  munmap(0xe01df1a16000, 64079)     = 0
+4610  getrandom("\xe2\xd8\x47\xdb\x03\x71\x7d\x8a", 8, GRND_NONBLOCK) = 8
+4610  brk(NULL)                         = 0xc813a3f84000
+4610  brk(0xc813a3fa5000)               = 0xc813a3fa5000
+4610  openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+4610  fstat(3, {st_mode=S_IFREG|0644, st_size=5719296, ...}) = 0
+4610  mmap(NULL, 5719296, PROT_READ, MAP_PRIVATE, 3, 0) = 0xe01df1200000
+4610  close(3)                          = 0
+4610  fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+4610  openat(AT_FDCWD, "data/01.log", O_RDONLY) = 3
+4610  fstat(3, {st_mode=S_IFREG|0664, st_size=19076, ...}) = 0
+4610  fadvise64(3, 0, 0, POSIX_FADV_SEQUENTIAL) = 0
+4610  mmap(NULL, 139264, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xe01df182e000
+4610  read(3, "2026-02-01 00:00:28 INFO module="..., 131072) = 19076
+4610  write(1, "2026-02-01 00:00:28 INFO module="..., 19076) = 19076
+4610  read(3, "", 131072)               = 0
+4610  munmap(0xe01df182e000, 139264)    = 0
+4610  close(3)                          = 0
+4610  close(1)                          = 0
+4610  close(2)                          = 0
+4610  exit_group(0)                     = ?
+4610  +++ exited with 0 +++
